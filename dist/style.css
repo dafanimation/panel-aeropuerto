@@ -1,0 +1,146 @@
+body {
+  margin: auto;
+  background-color: #eee;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+.Airport {
+  position: relative;
+  width: 1200px;
+  height: 150px;
+  margin: 100px auto;
+  cursor: pointer;
+}
+.Airport-boards {
+  display: flex;
+  justify-content: center;
+}
+.Airport-board {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  height: auto;
+  margin: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  background-color: #2B2B2B;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@keyframes departure {
+  60% {
+    top: 0px;
+  }
+  100% {
+    top: -300px;
+    left: 1800px;
+    transform: rotate(-20deg);
+  }
+}
+@keyframes arrival {
+  40% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0px;
+    left: 900px;
+    transform: rotate(0deg);
+  }
+}
+.Board-header {
+  display: flex;
+  width: 120%;
+  border-bottom: 20px solid #ffe12e;
+}
+.Board-icon {
+  width: 240px;
+  height: 150px;
+  background-color: #ffe12e;
+  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/410144-200.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Board-icon--arrival {
+  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/410147-200.png");
+}
+.Board-text {
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 80px;
+  line-height: 50px;
+  color: #ffe12e;
+  font-size: 60px;
+}
+.Board-title {
+  display: flex;
+  wrap: no-wrap;
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  color: #ffe12e;
+  font-size: 72px;
+  font-weight: 400;
+}
+.Board-line {
+  display: flex;
+  wrap: no-wrap;
+  width: 100%;
+  padding: 5px;
+}
+
+.Title-date {
+  flex: 0 0 30%;
+}
+.Title-destination {
+  flex: 0 0 70%;
+  margin-left: 160px;
+}
+
+.Line-date {
+  display: flex;
+  justify-content: space-around;
+  flex: 0 0 30%;
+}
+.Line-destination {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 70%;
+  padding-left: 20px;
+}
+.Line-pane {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 10 auto;
+  border-radius: 0.05em;
+  border: 0.02em solid #444;
+  position: relative;
+  background: #222;
+  text-align: center;
+  line-height: 60px;
+  font-size: 60px;
+  color: #fff;
+  font-family: monospace;
+  font-family: Lucida Console, Courier New;
+  text-transform: uppercase;
+  box-shadow: 0px 0.02em 0 #ccc, 0px 0.05em 0 #000;
+  text-shadow: -2px -4px 4px rgba(0, 0, 0, 0.9);
+  z-index: 50;
+}
+.Line-pane:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  border-top: 2px solid #000;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 0px;
+  opacity: 0.8;
+  z-index: 10;
+  margin-top: -1px;
+}
